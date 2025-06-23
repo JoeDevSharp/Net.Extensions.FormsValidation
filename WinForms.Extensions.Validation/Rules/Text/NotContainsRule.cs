@@ -14,7 +14,7 @@ namespace JoeDevSharp.WinForms.Extensions.Validation.Rules
         public ValidationResult Validate(string value)
         {
             if (value == null) value = string.Empty;
-            if (value.Contains(_substring))
+            if (value.ToLower().Contains(_substring.ToLower()))
                 return ValidationResult.Fail(_message);
             return ValidationResult.Success();
         }
