@@ -6,9 +6,9 @@ namespace JoeDevSharp.WinForms.Extensions.Validation.Rules
     {
         private readonly string _message;
 
-        public RequiredRule(string message)
+        public RequiredRule(string? message = null)
         {
-            _message = message;
+            _message = message ?? "Is Required";
         }
 
         public ValidationResult Validate(T value)
