@@ -8,10 +8,10 @@ namespace JoeDevSharp.WinForms.Extensions.Validation.Rules
         private readonly Regex _regex;
         private readonly string _message;
 
-        public RegexRule(string pattern, string message = "The format is not valid")
+        public RegexRule(string pattern, string? message = null)
         {
             _regex = new Regex(pattern);
-            _message = message;
+            _message = message ?? "The format is not valid";
         }
 
         public ValidationResult Validate(string value)
