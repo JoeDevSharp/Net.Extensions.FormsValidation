@@ -1,5 +1,5 @@
 ﻿using JoeDevSharp.WinForms.Extensions.Validation.Interfaces;
-using System.Collections.Generic;
+using JoeDevSharp.WinForms.Extensions.Validation.Rules;
 
 namespace JoeDevSharp.WinForms.Extensions.Validation
 {
@@ -12,7 +12,6 @@ namespace JoeDevSharp.WinForms.Extensions.Validation
             _rules.Add(rule);
             return this;
         }
-
 
         public ValidationResult Validate(T value)
         {
