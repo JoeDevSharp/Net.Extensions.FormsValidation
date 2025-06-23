@@ -19,7 +19,7 @@ namespace JoeDevSharp.WinForms.Extensions.Validation
             _controls.Add(control);
         }
 
-        public ValidationResult ValidateAll()
+        public ValidationResult ValidateForm()
         {
             foreach (var kvp in _fieldValidators)
             {
