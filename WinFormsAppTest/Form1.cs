@@ -1,5 +1,5 @@
-using JoeDevSharp.WinForms.Extensions.Validation;
-using JoeDevSharp.WinForms.Extensions.Validation.Extensions;
+using Net.Extensions.FormsValidation;
+using Net.Extensions.FormsValidation.Extensions;
 
 namespace WinFormsAppTest
 {
@@ -29,7 +29,6 @@ namespace WinFormsAppTest
                 MessageBox.Show(result.Message, "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 // gestion of error, focus on the first invalid control
-
                 return;
             }
 

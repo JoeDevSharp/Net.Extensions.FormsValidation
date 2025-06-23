@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\WinForms.Extensions.Validation\WinForms.Extensions.Validation.csproj" />
+    <ProjectReference Include="..\Net.Extensions.FormsValidation\Net.Extensions.FormsValidation.csproj" />
   </ItemGroup>
 
 </Project>

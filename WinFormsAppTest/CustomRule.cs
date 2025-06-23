@@ -1,6 +1,6 @@
-﻿using JoeDevSharp.WinForms.Extensions.Validation;
-using JoeDevSharp.WinForms.Extensions.Validation.Enums;
-using JoeDevSharp.WinForms.Extensions.Validation.Interfaces;
+﻿using Net.Extensions.FormsValidation;
+using Net.Extensions.FormsValidation.Enums;
+using Net.Extensions.FormsValidation.Interfaces;
 
 namespace WinFormsAppTest
 {
