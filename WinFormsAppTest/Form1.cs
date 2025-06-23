@@ -1,4 +1,5 @@
 using JoeDevSharp.WinForms.Extensions.Validation;
+using JoeDevSharp.WinForms.Extensions.Validation.Extensions;
 using JoeDevSharp.WinForms.Extensions.Validation.Rules;
 
 namespace WinFormsAppTest
@@ -15,6 +16,11 @@ namespace WinFormsAppTest
                 new Validator<string>()
                     .AddRule(new RequiredRule<string>("El nombre es obligatorio"))
                     .AddRule(new LengthRule(min: 3, max: 20)));
+
+            _formValidator.AddFieldValidator(textBox1,
+                new Validator<string>()
+                    .NotContains("test")
+                    .MaxLength(10, "El nombre no puede exceder los 10 caracteres"));
 
             _formValidator.AddFieldValidator(textBox2,
                 new Validator<string>()
@@ -33,11 +39,14 @@ namespace WinFormsAppTest
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var result = _formValidator.ValidateAll();
+            var result = _formValidator.ValidateForm();
 
             if (!result.IsValid)
             {
                 MessageBox.Show(result.Message, "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                // gestion of error, focus on the first invalid control
+
                 return;
             }
 
