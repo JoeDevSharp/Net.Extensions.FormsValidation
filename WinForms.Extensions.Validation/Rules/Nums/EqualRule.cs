@@ -18,5 +18,4 @@ namespace JoeDevSharp.WinForms.Extensions.Validation.Rules
             return ValidationResult.Success();
         }
     }
-    }
 }
