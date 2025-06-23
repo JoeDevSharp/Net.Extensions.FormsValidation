@@ -15,5 +15,10 @@ namespace JoeDevSharp.WinForms.Extensions.Validation.Extensions
         {
             return validator.AddRule(new FutureDateRule(message));
         }
+
+        public static Validator<DateTime> PastDateRule(this Validator<DateTime> validator, string? message = null)
+        {
+            return validator.AddRule(new PastDateRule(message));
+        }
     }
 }
