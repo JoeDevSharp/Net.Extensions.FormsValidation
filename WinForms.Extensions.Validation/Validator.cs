@@ -13,6 +13,7 @@ namespace JoeDevSharp.WinForms.Extensions.Validation
             return this;
         }
 
+
         public ValidationResult Validate(T value)
         {
             foreach (var rule in _rules)
