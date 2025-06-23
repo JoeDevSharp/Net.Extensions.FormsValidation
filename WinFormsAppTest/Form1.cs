@@ -1,6 +1,5 @@
 using JoeDevSharp.WinForms.Extensions.Validation;
 using JoeDevSharp.WinForms.Extensions.Validation.Rules;
-using System.Windows.Forms;
 
 namespace WinFormsAppTest
 {
